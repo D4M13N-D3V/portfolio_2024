@@ -49,13 +49,13 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ steps.prep.outputs.repository }}:latest
-            ghcr.io/${{ steps.prep.outputs.repository }}:${{GitVersion_SemVer}}
+            ghcr.io/${{ steps.prep.outputs.repository }}:${{ steps.gitversion.outputs.semVer }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
           
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v${{GitVersion_SemVer}}
-          name: Release v${{GitVersion_SemVer}}
+          tag_name: v${{ steps.gitversion.outputs.semVer }}
+          name: Release v${{ steps.gitversion.outputs.semVer }}
           generate_release_notes: true
