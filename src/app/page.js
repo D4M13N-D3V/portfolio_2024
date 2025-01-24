@@ -99,7 +99,7 @@ export default function ComingSoon() {
                   Coming Soon
                 </Typography>
               </Fade>
-              <Fade in={showMainContent} timeout={1500}>
+              <Fade in={showMainContent} timeout={1000}>
                 <Typography
                   variant="h2"
                   color="text.secondary"
@@ -107,10 +107,18 @@ export default function ComingSoon() {
                 >
                   Something amazing is in the works. Stay tuned!
                 </Typography>
+              </Fade>
+              <Fade in={showMainContent} timeout={1000}>
                 <Typography
-                  variant="h2"
-                  color="text.secondary"
-                  sx={{ maxWidth: '600px' }}
+                  variant="h6"
+                  component="h6"
+                  sx={{
+                    background: 'linear-gradient(45deg, #90caf9 30%, #4fc3f7 90%)',
+                    backgroundClip: 'text',
+                    WebkitBackgroundClip: 'text',
+                    color: 'transparent',
+                    mb: 2,
+                  }}
                 >
                   https://github.d4m13n.dev/
                 </Typography>
