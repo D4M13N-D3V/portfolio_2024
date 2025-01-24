@@ -43,9 +43,9 @@ COPY --from=builder /app/package-lock.json ./
 
 # Copy necessary build files
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-COPY --from=builder --chown=nextjs:nodejs /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/next.config.mjs ./
+#COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /public ./public
+COPY --from=builder --chown=nextjs:nodejs /next.config.mjs ./
 
 # Install only production dependencies
 RUN npm ci --only=production
