@@ -107,6 +107,13 @@ export default function ComingSoon() {
                 >
                   Something amazing is in the works. Stay tuned!
                 </Typography>
+                <Typography
+                  variant="h2"
+                  color="text.secondary"
+                  sx={{ maxWidth: '600px' }}
+                >
+                  https://github.d4m13n.dev/
+                </Typography>
               </Fade>
             </>
           )}
