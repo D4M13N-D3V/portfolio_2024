@@ -26,8 +26,9 @@ jobs:
         uses: paulhatch/semantic-version@v5.0.3
         with:
           tag_prefix: "v"
-          major_pattern: "BREAKING CHANGE:"
-          minor_pattern: "feat:"
+          major_pattern: "(epic|major):"
+          minor_pattern: "(feat|minor):"
+          patch_pattern: "(fix|patch):"
           version_format: "${major}.${minor}.${patch}"
           
       - name: Prepare Docker Repository Name
